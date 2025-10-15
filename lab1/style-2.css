@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Relief:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cherry+Cream+Soda&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cascadia+Mono:ital,wght@0,200..700;1,200..700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img{
+    max-width: 100%;
+}
+
+header{
+    text-align: center;
+    padding: 1rem;
+    background-color: rgb(148, 62, 62);
+    font-size: 0.8rem;
+    font-family: "Comic Relief", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+}
+
+body{
+    background-image: linear-gradient(rgb(0, 255, 106), rgb(87, 255, 157), rgb(0, 255, 106));
+}
+
+#intro{
+    text-align: center;
+    padding: 1rem;
+    font-family: "Comic Relief", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h2{
+    font-family: "Cherry Cream Soda", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h3, p, li{
+    font-family: "Cascadia Mono", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+ol{
+    list-style-type: square;
+}
+
+#kontener {
+    justify-content: center;
+    width: 100vw;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        "pierwszy zdjecie"
+        "drugi zdjecie2";
+    gap: 1rem;
+    justify-content: center;
+    align-items: start;
+}  
+
+.pierwszy, .drugi {
+    background-color: rgb(171, 255, 217);
+    border: solid rgb(94, 214, 160) 2px;
+    width: 100%;
+    max-width: 34rem;
+    height: max-content;
+    margin: 0 0 0 auto;
+    padding: 1.5rem;
+}
+
+.pierwszy{
+    margin-bottom: 3rem;
+    grid-area: pierwszy;
+}
+
+.drugi {
+    grid-area: drugi;
+}
+
+.zdjecie{
+    grid-area: zdjecie;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.zdjecie2 {
+    grid-area: zdjecie2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.zdjecie, .zdjecie2 {
+    width: 100%;
+    max-width: 40rem;
+}
+
+.zdjecie > img{
+    aspect-ratio: 2/1;
+    height: 400px;
+    width: auto;
+    object-fit: cover;
+    border-radius: 0.5rem;
+}
+
+.zdjecie2 > img{
+    height: 400px;
+    width: auto;
+    object-fit: cover;
+    border-radius: 0.5rem;
+}
+
+html, body {
+    overflow-x: hidden;
+    max-width: 100%;
+  }  
+
+@media (max-width: 768px) {
+    #kontener {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "pierwszy"
+            "zdjecie"
+            "drugi"
+            "zdjecie2";
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    body {
+        background-size: contain;
+    }
+
+    header {
+        font-size: 1.2rem;
+        margin-top: 0.5rem;
+        padding: 0.5rem;
+    }
+
+    #intro {
+        width: 90%;
+        margin: 1rem auto;
+        font-size: 0.9rem;
+    }
+
+    #kontener {
+        width: 100%;
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        overflow-x: hidden;
+    }
+
+    .pierwszy, .drugi {
+        width: 90%;
+        padding: 1rem;
+        font-size: 0.9rem;
+        margin: 0 auto;
+    }
+
+    .zdjecie, .zdjecie2 {
+        width: 90%;
+    }
+
+    .zdjecie > img,
+    .zdjecie2 > img {
+        width: 100%;
+        height: auto;
+    }
+
+    h2, h3 {
+        font-size: 1rem;
+    }
+
+    p, li {
+        font-size: 0.9rem;
+    }
+
+    footer {
+        text-align: center;
+        margin: 1rem 0;
+        font-size: 0.8rem;
+    }
+}
