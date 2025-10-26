@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#kontener {
+    width: 600px;
+    background: #fff;
+    padding: 25px 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+#kontener input,
+#kontener button {
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px 12px;
+    font-size: 15px;
+    transition: all 0.2s ease;
+}
+
+#search {
+    width: 100%;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+}
+
+#search:focus,
+#add:focus,
+#date:focus {
+    border-color: #4a90e2;
+    outline: none;
+    box-shadow: 0 0 5px rgba(74, 144, 226, 0.3);
+}
+
+#add {
+    width: 40%;
+    margin-right: 5px;
+}
+
+#date {
+    width: 35%;
+    margin-right: 5px;
+}
+
+#bttn {
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    cursor: pointer;
+    width: 20%;
+    min-width: 80px;
+}
+
+#bttn:hover {
+    background-color: #357abd;
+}
+
+#bttn:active {
+    background-color: #2f5f91;
+}
+
+.highlight {
+    background-color: yellow;
+    padding: 0 2px;
+    border-radius: 3px;
+}
+
+.edit-input {
+    width: 70%;
+    padding: 6px 10px;
+    font-size: 15px;
+    border: 1px solid #4a90e2;
+    border-radius: 6px;
+    outline: none;
+}
+
+.edit-input:focus {
+    box-shadow: 0 0 5px rgba(74, 144, 226, 0.3);
+}
