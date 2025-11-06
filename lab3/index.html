@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Puzzle Krzysztof Staszkiewicz</title>
+    <link rel="stylesheet" href="leaflet-1.7.1/leaflet.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="leaflet-1.7.1/leaflet-src.js"></script>
+    <script src="leaflet-1.7.1/leaflet-providers.js"></script>
+    <script src="leaflet-1.7.1/leaflet-image.js"></script>
+</head>
+<body>
+    <h1>Puzzle z mapy</h1>
+
+    <div id="controls">
+        <button id="getLocation">Moja lokalizacja</button>
+        <button id="saveButton">Pobierz mapę</button>
+    </div>
+  
+    <div class="grid">
+        <div id="map"></div>
+    
+        <canvas id="rasterMap" width="300" height="300"></canvas>
+    
+        <div id="piecesContainer"></div>
+    
+        <div id="boardContainer"></div>
+    </div>
+
+    <script src="main.js" defer></script>
+</body>
+</html>
