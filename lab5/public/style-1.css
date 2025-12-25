@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Quintessential&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("ksiazka.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+#swapkontener {
+    text-align: center;
+}
+
+#swap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.przyciski {
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 20%;
+}
+
+.przyciski:hover {
+    background-color: lightgray;
+}
+
+img{
+    max-width: 100%;
+}
+#intro {
+    text-align: center;
+    width: 100%;
+    max-width: 30rem;
+    margin: 0 auto;
+}
+header {
+    font-family: "Lobster", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    margin-top: 1.5rem;
+}
+footer{
+    text-align: right;
+    margin: 0 0 1rem auto;
+}
+h2, h3, p, li {
+    font-family: "Quintessential", serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: left;
+}
+ol {
+    list-style-type:circle;
+}
+#kontener{
+    display: grid;
+    grid-template-areas: 
+        "pierwszy"
+        "zdjecie-pierwsze"
+        "drugi"
+        "zdjecie-drugie";
+    gap: 1rem;
+    justify-items: center;
+    width: 100vw;
+    min-height: 100vh;
+}
+
+.pierwszy {
+    background-image: url("kartka.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-left: 1.5rem;
+    margin-top: 4.5rem;
+    width: min(90%, 25rem);
+    height: max-content;
+    border: solid black 1px;
+    border-radius: 0.5rem;
+    grid-area: pierwszy;
+}
+.pierwszy:hover, .drugi:hover{
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
+    transition: 0.3s;
+}
+
+.drugi {
+    background-image: url("kartka.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-left: 1.5rem;
+    width: min(90%, 25rem);
+    height: max-content;
+    border: solid black 1px;
+    border-radius: 0.5rem;
+    grid-area: drugi;
+}
+
+.zdjecie{
+    width: 40%;
+    grid-area: zdjecie-pierwsze;
+}
+
+.zdjecie > img, .zdjecie2 > img{
+    aspect-ratio: 2 / 1;
+}
+
+.zdjecie2{
+    width: 40%;
+    grid-area: zdjecie-drugie;
+}
+
+@media only screen and (min-width: 768px) {
+    #kontener {
+      grid-template-areas:
+        "pierwszy drugi"
+        "zdjecie-pierwsze zdjecie-drugie";
+    }
+  
+    .pierwszy, .drugi, .zdjecie, .zdjecie2 {
+      max-width: 90%;
+    }
+  }
+  
+  @media only screen and (max-width: 375px) {
+    body {
+        background-size: contain;
+    }
+
+    header {
+        font-size: 1.2rem;
+        margin-top: 0.5rem;
+        padding: 0.5rem;
+    }
+
+    #intro {
+        width: 90%;
+        margin: 0 auto;
+        font-size: 0.9rem;
+    }
+
+    #kontener {
+        width: 100%;
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        overflow-x: hidden;
+    }
+
+    .pierwszy, .drugi {
+        width: 90%;
+        max-width: 22rem;
+        padding: 1rem;
+        font-size: 0.9rem;
+        margin: 0 auto;
+    }
+
+    .zdjecie, .zdjecie2 {
+        width: 90%;
+    }
+
+    .zdjecie > img,
+    .zdjecie2 > img {
+        width: 100%;
+        height: auto;
+    }
+
+    h2, h3 {
+        font-size: 1rem;
+    }
+
+    p, li {
+        font-size: 0.9rem;
+    }
+
+    footer {
+        text-align: center;
+        margin: 0 0 1rem auto;
+        font-size: 0.8rem;
+    }
+}
+
+body {
+  overflow-x: hidden;
+}
